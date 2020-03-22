@@ -31,7 +31,7 @@ class HackerNews extends Component {
 }
 
 /////
-const mapStateToProps = (state) => state.hackerNews
+const mapStateToProps = (state) => state.hackerNews;
 const mapDispatchToProps = {
   requestArticles
 }

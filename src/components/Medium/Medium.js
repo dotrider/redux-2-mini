@@ -18,6 +18,8 @@ class Medium extends Component {
 
 
   render() {
+  
+    // console.log('medium',this.props)
     const articles = this.props.articles.map((article => <Card key={article.id} article={article} />))
     return (
       <div className='news-container'>
@@ -29,10 +31,15 @@ class Medium extends Component {
 }
 
 
-const mapStateToProps = (state) => state.mediumReducer
+
+const mapStateToProps = (state) => {
+  // console.log('map', state.mediumReducer)
+  return state.mediumReducer};
+
 const mapDispatchToProps = {
   requestArticles
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Medium);
 

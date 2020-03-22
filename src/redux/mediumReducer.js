@@ -3,13 +3,13 @@ import axios from 'axios';
 
 let initialState = {
     loading: false,
-    acticles: []
+    articles: []
 }
 
 const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 
 export function requestArticles(){
-    let articles = axios.get('/api/medium').then(res => res. data);
+    let articles = axios.get('/api/medium').then(res => res.data);
         return{
             type: REQUEST_ARTICLES,
             payload: articles
